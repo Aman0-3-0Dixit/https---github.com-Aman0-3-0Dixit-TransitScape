@@ -1,0 +1,534 @@
+html {
+	font-size:62.5%;
+  
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.frame-27021-gg1 :hover{
+  border-color: #0e0e0e;
+  background-color: #0e0e0e;
+}
+
+.button1{
+  border-style:double;
+  border-color: #070707;
+  background-color:#53118f;
+  border-radius: 100px 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 11px;
+  margin-right: -2px;
+}
+
+.button1Click{
+  border-style:double;
+  border-color: #070707;
+  background-color:#0d0c0d;
+  border-radius: 100px 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 11px;
+  margin-right: -2px;
+}
+
+.button2{
+  border-style: double;
+  border-color: #0a0a0a;
+  background-color: #53118f;
+  border-radius: 100px 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 28px;
+  padding-left: 20px;
+  margin-left: 9px;
+  
+}
+
+.button2Click{
+  border-style: double;
+  border-color: #0a0a0a;
+  background-color: #0e0d0e;
+  border-radius: 100px 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 28px;
+  padding-left: 20px;
+  margin-left: 9px;
+}
+
+
+
+.inputName{
+  background-color: #070707;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  margin-right: -150px;
+  margin-left:-10px;
+  font-size: 15px;
+  outline: #070707;
+}
+
+.inputEmail{
+  background-color: #070707;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  margin-right: -150px;
+  margin-left:-10px;
+  font-size: 15px;
+  outline: #070707;
+}
+
+.inputPassword{
+  background-color: #070707;
+  color: white;
+  padding: 10px 10px 12px 10px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  margin-right: -150px;
+  margin-left: -213px;
+  font-size: 15px;
+  outline: #070707;
+}
+
+.inputNumber{
+  background-color: #070707;
+  color: white;
+  padding: 10px 10px 10px 1px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  margin-right: -1300px;
+  margin-left:-10px;
+  font-size: 15px;
+  outline: #070707;
+}
+
+.createAccount{
+  width: 100%;
+  height: 5.8rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 0.1rem #933dc9;
+  box-sizing: border-box;
+  background-color: #933dc9;
+  border-radius: 1.4rem;
+  flex-shrink: 0;
+}
+
+#checkbox  {
+  width:2.5rem;
+  height: 2.5rem;
+  border-radius: 9rem !important;
+  vertical-align: middle;
+  border: 1px solid black;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+
+#checkbox :checked  {
+  appearance: auto !important;
+  clip-path:polygon(25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25%) !important;
+  accent-color:#933dc9 !important;
+}
+
+.frame-27021-gg2 {
+  border-color: #0e0e0e;
+  background-color: #0e0e0e;
+  border-radius: 100px 100px;
+}
+
+.frame-27021-gg3  {
+  border-color: #0e0e0e;
+  background-color: #0e0e0e;
+  border-radius: 100px 100px;
+  margin-left: 30px;
+}
+
+
+ul, li {
+	list-style: none;
+}
+
+input {
+	border: none;
+}
+
+body {
+  width: auto;
+  height:auto;
+}
+
+.sign-up-E1P {
+  width: auto;
+  height: 72rem;
+  position: absolute;
+}
+.sign-up-E1P .sign-up-yUm {
+  width: auto;
+  height: 93rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: contain;
+  vertical-align: top;
+}
+
+.sign-up-E1P .frame-42-vQ1 {
+  box-sizing: border-box;
+  padding: 11.6rem 8.35rem 7.8rem 7.85rem;
+  width: 47.7rem;
+  height: 48.6rem;
+  position: relative;
+  left: 18.25rem;
+  top: 8.1rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../assets/ellipse-3.png');
+}
+.sign-up-E1P .frame-42-vQ1 .item-3636253-1-Dtu {
+  width: 31.5rem;
+  height: 29.2rem;
+  object-fit: cover; 
+  vertical-align: top;
+  border-radius: 14.6rem;
+}
+.sign-up-E1P .frame-4-iam {
+  width: 36.5rem;
+  height: 62.4rem;
+  position: absolute;
+  left: 85.5rem;
+  top: 4.1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB {
+  box-sizing: border-box;
+  padding-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-43-mow {
+  margin: 0rem 6rem 1.6rem 2.7rem;
+  box-sizing: border-box;
+  padding: 2rem 2rem;
+  width: calc(100% - 5.7rem);
+  height: 5.8rem;
+  background-color: #53118f;
+  border-radius: 21.2rem;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-43-mow .frame-27021-gg1 {
+  width: 24.7rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-43-mow .frame-27021-gg1 .as-a-rider-p1X {
+  padding-right: 3px;
+  margin-right: 2.7rem;
+  margin-left: 2.7rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-43-mow .frame-27021-gg1 .as-a-driver-jPP {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .create-your-account-riu {
+  margin: 0rem 0rem 2.4rem 0.1rem;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-5-ZdK {
+  margin: 0rem 1.4rem 3.1rem 0.1rem;
+  box-sizing: border-box;
+  padding: 1.3rem 17.5rem 1.4rem 2.5rem;
+  width: calc(100% - 1.5rem);
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #933dc9;
+  background-color: rgba(9, 9, 9, 0.1000000015);
+  border-radius: 1.4rem;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-5-ZdK .vector-4KB {
+  margin-right: 2.8rem;
+  width: 3.4rem;
+  height: 2.8rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-5-ZdK .mr-random-PMT {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-1-gbT {
+  margin: 0rem 1.5rem 3.2rem 0rem;
+  box-sizing: border-box;
+  padding: 1.1rem 10.8rem 1.1rem 2.3rem;
+  width: calc(100% - 1.5rem);
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #933dc9;
+  background-color: rgba(9, 9, 9, 0.1000000015);
+  border-radius: 1.4rem;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-1-gbT .vector-nuP {
+  margin-right: 2.4rem;
+  width: 3.9rem;
+  height: 2.7rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-1-gbT .exampledomaincom-wXP {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.1729999542;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-1-gbT .exampledomaincom-wXP .exampledomaincom-wXP-sub-0 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-1-gbT .exampledomaincom-wXP .exampledomaincom-wXP-sub-1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-2-Tu3 {
+  margin-bottom: 3.4rem;
+  width: 35rem;
+  height: 5.2rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-2-Tu3 .show-oT7 {
+  width: 3.9rem;
+  height: 1.8rem;
+  position: absolute;
+  left: 29rem;
+  top: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-2-Tu3 .item--um3 {
+  width: 3.3rem;
+  height: 1.8rem;
+  position: absolute;
+  left: 7.3rem;
+  top: 1.2rem;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-2-Tu3 .vector-cfT {
+  width: 3.4rem;
+  height: 1.9rem;
+  position: absolute;
+  left: 2.1rem;
+  top: 1.8rem;
+  object-fit: contain;
+  vertical-align: top;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-2-Tu3 .rectangle-3-ABB {
+  width: 35rem;
+  height: 5.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: solid 0.1rem #933dc9;
+  box-sizing: border-box;
+  background-color: rgba(9, 9, 9, 0.1000000015);
+  border-radius: 1.4rem;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-6-Gk1 {
+  margin: 0rem 1.6rem 2rem 0rem;
+  box-sizing: border-box;
+  padding: 1.4rem 19.6rem 1.5rem 2.2rem;
+  width: calc(100% - 1.6rem);
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #933dc9;
+  background-color: rgba(9, 9, 9, 0.1000000015);
+  border-radius: 1.4rem;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-6-Gk1 .icons8-phone-50-1-1-No3 {
+  margin-right: 1.2rem;
+  width: 2.8rem;
+  height: 2.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .frame-6-Gk1 .xxxxxxxxxxx-iM7 {
+  margin-top: 0.1rem;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .auto-group-4dkf-otM {
+  margin: 0rem 2.3rem 0rem 1.2rem;
+  width: calc(100% - 3.5rem);
+  height: 4.2rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .auto-group-4dkf-otM .checkbox-7e9 {
+  margin-right: 0.4rem;
+  box-sizing: border-box;
+  padding: 0.0447rem 0.0446rem;
+  width: 4.3rem;
+  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .auto-group-4dkf-otM .checkbox-7e9 .rectangle-e8H {
+  width: 3rem;
+  height: 3rem;
+  border: solid 0.2rem #ffffff;
+  box-sizing: border-box;
+  border-radius: 0.9rem;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .auto-group-4dkf-otM .i-agree-to-the-terms-conditions-xuf {
+  margin-bottom: 1.09rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.1729999781;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .auto-group-4dkf-otM .i-agree-to-the-terms-conditions-xuf .i-agree-to-the-terms-conditions-xuf-sub-0 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+}
+.sign-up-E1P .frame-4-iam .auto-group-fekz-rBB .auto-group-4dkf-otM .i-agree-to-the-terms-conditions-xuf .i-agree-to-the-terms-conditions-xuf-sub-1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #933dc9;
+  font-family: Work Sans, 'Source Sans Pro';
+}
+.sign-up-E1P .frame-4-iam .auto-group-rkfb-3pd {
+  margin-bottom: 1.6rem;
+  width: 100%;
+  height: 5.8rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 0.1rem #933dc9;
+  box-sizing: border-box;
+  background-color: #933dc9;
+  border-radius: 1.4rem;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .already-have-an-account-sign-in-iQy {
+  margin-right: 1.4rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.1729999781;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+}
+.sign-up-E1P .frame-4-iam .already-have-an-account-sign-in-iQy .already-have-an-account-sign-in-iQy-sub-0 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+}
+.sign-up-E1P .frame-4-iam .already-have-an-account-sign-in-iQy .already-have-an-account-sign-in-iQy-sub-1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #933dc9;
+  font-family: Work Sans, 'Source Sans Pro';
+}

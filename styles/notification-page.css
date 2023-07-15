@@ -1,0 +1,172 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 120rem;
+}.notification-page-BJ9 {
+  width: 100%;
+  height: 160.8rem;
+  position: relative;
+}
+.notification-page-BJ9 .rider-schedule-page-ios {
+  box-sizing: border-box;
+  padding: 0.073rem 0rem 0.073rem 0.006rem;
+  width: 120rem;
+  height: 160.8rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #241036 26.87%, #412852 83.65%);
+}
+.notification-page-BJ9 .rider-schedule-page-ios .frame-44-SE5 {
+  box-sizing: border-box;
+  padding-bottom: 112.4rem;
+  width: 258.6938rem;
+  height: 151.2268rem;
+}
+.notification-page-BJ9 .rider-schedule-page-ios .frame-44-SE5 .menu-closed-mXF {
+  margin-bottom: 1.3599rem;
+  box-sizing: border-box;
+  padding: 0.627rem 5.806rem 1.023rem 1.794rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(5rem);
+  background-color: #000000;
+}
+.notification-page-BJ9 .rider-schedule-page-ios .frame-44-SE5 .menu-closed-mXF .logo-4mF {
+  margin-right: 4.6rem;
+  width: 11rem;
+  height: 8.6168rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.notification-page-BJ9 .rider-schedule-page-ios .frame-44-SE5 .menu-closed-mXF .group-26918-1Ah {
+  margin: 1.134rem 9.299rem 0rem 0rem;
+  width: 3.3008rem;
+  height: 1.1507rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.notification-page-BJ9 .rider-schedule-page-ios .frame-44-SE5 .menu-closed-mXF .vector-7zR {
+  margin: 0.451rem 8.298rem 0rem 0rem;
+  width: 2.0016rem;
+  height: 1.6684rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.notification-page-BJ9 .rider-schedule-page-ios .frame-44-SE5 .menu-closed-mXF .auto-group-odhs-EZF {
+  margin: 0.923rem 4.598rem 0rem 0rem;
+  width: 5.0023rem;
+  height: 3.304rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.notification-page-BJ9 .rider-schedule-page-ios .frame-44-SE5 .menu-closed-mXF .vector-Z5j {
+  margin: 0.684rem 8.399rem 0rem 0rem;
+  width: 1.7015rem;
+  height: 1.5006rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.notification-page-BJ9 .rider-schedule-page-ios .frame-44-SE5 .menu-closed-mXF .vector-HGd {
+  margin: 0.799rem 7.598rem 0rem 0rem;
+  width: 1.8016rem;
+  height: 1.6186rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.notification-page-BJ9 .rider-schedule-page-ios .frame-44-SE5 .menu-closed-mXF .icons8-car-30-2-1iR {
+  margin: 0.984rem 7.1rem 0rem 0rem;
+  width: 2.3rem;
+  height: 2.0015rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.notification-page-BJ9 .rider-schedule-page-ios .frame-44-SE5 .menu-closed-mXF .icons8-customer-support-32-2-vaV {
+  margin: 0.683rem 12.2rem 0rem 0rem;
+  width: 2.1rem;
+  height: 2.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.notification-page-BJ9 .rider-schedule-page-ios .frame-44-SE5 .menu-closed-mXF .hello-rider-qxM {
+  margin: 0rem 3.8rem 0.117rem 0rem;
+  display: flex;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #933dc9;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.notification-page-BJ9 .rider-schedule-page-ios .frame-44-SE5 .menu-closed-mXF .vector-jnq {
+  margin-bottom: 0.117rem;
+  width: 2.9rem;
+  height: 3.1rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.notification-page-BJ9 .rider-schedule-page-ios .frame-44-SE5 .auto-group-xmpd-qL5 {
+  margin-left: 5.1938rem;
+  width: 253.5rem;
+  height: 27.2rem;
+}
+.notification-page-BJ9 .frame-27129-XTo {
+  width: 80.1rem;
+  height: 78.15rem;
+  position: absolute;
+  left: 21rem;
+  top: 17.35rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.notification-page-BJ9 .frame-27129-XTo .notifications-Sam {
+  margin: 0rem 0.9rem 6.65rem 0rem;
+  display: flex;
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.notification-page-BJ9 .frame-27129-XTo .frame-93-kbT {
+  margin: 0rem 0.2rem 5.6rem 0rem;
+  width: 79.9rem;
+  height: 30.1rem;
+  background: linear-gradient(180deg, #2a1141 -0%, #492d5a 100%);
+  flex-shrink: 0;
+}
+.notification-page-BJ9 .frame-27129-XTo .frame-94-3qT {
+  margin-left: 0.2rem;
+  width: 79.9rem;
+  height: 30.1rem;
+  background: linear-gradient(180deg, #2a1141 -0%, #492d5a 100%);
+  flex-shrink: 0;
+}

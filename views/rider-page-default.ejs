@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Rider Page/Default</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans%3A400"/>
+  <link rel="stylesheet" href="./styles/rider-page-default.css"/>
+</head>
+<body>
+<div class="rider-page-default-v7j">
+  <div class="frame-44-5uj">
+    <div class="menu-closed-xs3">
+      <a href=""><img class="logo-SXK" src="./assets/logo-9Jh.png"/></a>
+      <a href=""><img class="group-26918-jmK" src="./assets/group-26918-DCM.png"/></a>
+      <a href=""><img class="vector-pXs" src="./assets/vector-DmT.png"/></a>
+      <a href=""><img class="auto-group-7pbw-7ms" src="./assets/auto-group-7pbw.png"/></a>
+      <a href=""><img class="vector-PzH" src="./assets/vector-Ct1.png"/></a>
+      <a href=""><img class="vector-iFs" src="./assets/vector-Ne5.png"/></a>
+      <a href=""><img class="icons8-car-30-2-33F" src="./assets/icons8-car-30-2-ZGu.png"/></a>
+      <a href=""><img class="icons8-customer-support-32-2-wPX" src="./assets/icons8-customer-support-32-2-aL9.png"/></a>
+      <div class="hello-rider-EtR">Hello, <%= rider %></div>
+      <a href=""><img class="vector-tCH" src="./assets/vector-iqo.png"/></a>
+    </div>
+    <div class="auto-group-urkf-YGq">
+      <img class="animation500ljflc8nv-1-eqf" src="./assets/animation500ljflc8nv-1.png"/>
+      <p class="get-lost-in-your-gig-because-transitscape-will-never-let-you-lose-on-your-journey-Zxd">
+        <span class="get-lost-in-your-gig-because-transitscape-will-never-let-you-lose-on-your-journey-Zxd-sub-0">Get lost in your gig because </span>
+        <span class="get-lost-in-your-gig-because-transitscape-will-never-let-you-lose-on-your-journey-Zxd-sub-1">TransitScape</span>
+        <span class="get-lost-in-your-gig-because-transitscape-will-never-let-you-lose-on-your-journey-Zxd-sub-2"> will never let you lose on your journey.</span>
+      </p>
+    </div>
+    <div class="frame-56-gho">
+      <button class="auto-group-kwqj-mUM rideClick" onclick="rideclick()">SCHEDULE A RIDE</button>
+      <div class="line-14-TMB">
+      </div>
+      <button class="schedule-a-delivery-neM deliveryClick" onclick="deliveryclick()">SCHEDULE A DELIVERY</button>
+    </div>
+    <div class="frame-49-gUq">
+      <form action="/rider-page-default" method="post">
+      <div class="frame-29-Auo"><input id="autocomplete" name="pickup" class="design" type="text" placeholder="Pickup Location" required></div>
+      <div class="frame-50-Qp9"><input class="design" name="drop" type="text" placeholder="Drop Location" required></div>
+      <div class="frame-51-tDX"><select name="type" class="design">
+        <option value="Two-wheeler">Two-wheeler</option>
+        <option value="Four-wheeler-Mini">Four-wheeler-Mini</option>
+        <option value="Four-wheeler-Sedan">Four-wheeler-Sedan</option>
+        <option value="Four-wheeler-XUV">Four-wheeler-XUV</option>
+        <option value="Three-wheeler-Auto">Three-wheeler-Auto</option>
+      </select></div>
+      <div class="frame-52-YYy"><select name="people" class="design">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select></div>
+      <div class="frame-53-1hT"><input class="design" name="date" type="date" placeholder="Date of travelling" required></div>
+      <div class="frame-54-g2u"><input class="design" name="time" type="time" placeholder="Time of travelling" required></div>
+      <div class="frame-52-YYy frequency">
+        <select name="freq" class="frequency">
+          <option value="1">once</option>
+          <option value="2">twice</option>
+          <option value="3">thrice</option>
+          <option value="4">for 4 days</option>
+          <option value="4">for 5 days</option>
+          <option value="4">for 6 days</option>
+          <option value="4">weekly</option>
+        </select>
+        <div class="rectangle-3-MYM">
+        </div>
+      </div>
+      <div class="auto-group-cyyh-rk"><button class="auto-group-cyyh-rk1" type="submit">SCHEDULE</button></div></form>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  let autocomplete;
+  function initMap(){
+    autocomplete = new google.maps.places.Autocomplete(
+      document.getElementById('autocomplete'),
+      {
+        types: ['establishment'],
+        componentRestrictions:{'country' : ['AU']},
+        fields:['place_id', 'geometry', 'name']
+      }
+    );
+  }
+
+</script>
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTFr-lzuWpp8PHPb3n4X-CI7E-YoVA70I&libraries=places&callback=initMap" async defer>
+</script>
+
+<script>
+    document.querySelector('.auto-group-kwqj-mUM').classList.remove('rideClick');
+
+function rideclick(){
+document.querySelector('.auto-group-kwqj-mUM').classList.add('rideClick');
+document.querySelector('.schedule-a-delivery-neM').classList.remove('deliveryClick');
+
+/*const button1Value = document.querySelector('.button1').classList.contains('button1Click') ? 'true' : 'false';
+document.getElementsByName('button1Value').value = button1Value;*/
+}
+
+
+function deliveryclick(){
+document.querySelector('.schedule-a-delivery-neM').classList.add('deliveryClick');
+document.querySelector('.auto-group-kwqj-mUM').classList.remove('rideClick');
+
+/*const button2Value = document.querySelector('.button2').classList.contains('button2Click') ? 'true' : 'false';
+document.getElementsByName('button2Value').value = button2Value;*/
+}
+
+
+//google maps api key = AIzaSyBTFr-lzuWpp8PHPb3n4X-CI7E-YoVA70I
+
+
+</script>
+</body>
+</html>

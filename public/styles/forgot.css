@@ -1,0 +1,135 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 120rem;
+}.forgot-V5b {
+  box-sizing: border-box;
+  padding: 8.2rem 22.1rem 8.7rem 15.9rem;
+  width: 100%;
+  height: 71.2rem;
+  overflow: hidden;
+  position: relative;
+  background-color: #090909;
+}
+.forgot-V5b .frame-27019-DGV {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.forgot-V5b .frame-27019-DGV .frame-27113-yFf {
+  width: 78.1rem;
+  height: 7.8rem;
+  position: absolute;
+  left: 0;
+  top: 39.3rem;
+}
+.forgot-V5b .frame-27019-DGV .frame-27113-yFf .rectangle-4-hhT {
+  width: 69rem;
+  height: 5.7rem;
+  cursor: pointer;
+  position: absolute;
+  left: 8.1rem;
+  top: 2.1rem;
+  border: solid 0.1rem #933dc9;
+  box-sizing: border-box;
+  background-color: #933dc9;
+  border-radius: 2.5rem;
+}
+.forgot-V5b .frame-27019-DGV .frame-27113-yFf .send-instructions-PaH {
+  width: 20.8rem;
+  height: 2.9rem;
+  position: absolute;
+  left: 32.8rem;
+  top: 3.6rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.forgot-V5b .frame-27019-DGV .frame-41-otu {
+  box-sizing: border-box;
+  padding: 3.2rem 4.1rem 17rem 7.9rem;
+  width: 79.3rem;
+  height: 54.3rem;
+  position: absolute;
+  left: 2.7rem;
+  top: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(147, 61, 201, 0.1000000015);
+  border-radius: 5rem;
+}
+.forgot-V5b .frame-27019-DGV .frame-41-otu .converted-1-6t1 {
+  margin: 0rem 0rem 2.2rem 2.8rem;
+  opacity: 0.75;
+  width: 9.7rem;
+  height: 11.5rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.forgot-V5b .frame-27019-DGV .frame-41-otu .forgot-password-DBw {
+  margin: 0rem 30.8rem 2.2rem 0rem;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.forgot-V5b .frame-27019-DGV .frame-41-otu .we-will-be-sending-a-set-of-instructions-at-the-registered-mail-id-to-reset-your-password-ieV {
+  margin: 0rem 0rem 3.5rem 1rem;
+  max-width: 66.3rem;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.forgot-V5b .frame-27019-DGV .frame-41-otu .frame-1-nuF {
+  margin-right: 16.1rem;
+  box-sizing: border-box;
+  padding: 1rem 20.2rem 1rem 4.2rem;
+  width: calc(100% - 16.1rem);
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #933dc9;
+  background-color: rgba(9, 9, 9, 0.1000000015);
+  border-radius: 2.5rem;
+  flex-shrink: 0;
+}
+.forgot-V5b .frame-27019-DGV .frame-41-otu .frame-1-nuF .vector-inu {
+  margin-right: 3.4rem;
+  width: 4.2rem;
+  height: 3.3rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.forgot-V5b .frame-27019-DGV .frame-41-otu .frame-1-nuF .blahexamplecom-fCM {
+  margin-top: 0.1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}

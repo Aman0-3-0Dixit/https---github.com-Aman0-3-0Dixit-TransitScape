@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>driver main page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans%3A400"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400"/>
+  <link rel="stylesheet" href="./styles/driver-main-page.css"/>
+</head>
+<body>
+<div class="driver-main-page-sxm">
+  <div class="frame-27117-36Z">
+    <div class="driver-page-npq">
+      <div class="frame-44-WVw">
+        <div class="menu-closed-e6M">
+          <a href=""><img class="logo-MFf" src="./assets/logo-jY5.png"/></a>
+          <a href=""><img class="group-26918-Hf7" src="./assets/group-26918-kP3.png"/></a>
+          <a href=""><img class="vector-oNZ" src="./assets/vector-8bK.png"/></a>
+          <a href=""><img class="auto-group-vgzd-jGD" src="./assets/auto-group-vgzd.png"/></a>
+          <a href=""><img class="vector-ee5" src="./assets/vector-pP3.png"/></a>
+          <a href=""><img class="vector-P5s" src="./assets/vector-3GM.png"/></a>
+          <a href=""><img class="icons8-car-30-2-JyX" src="./assets/icons8-car-30-2-6CR.png"/></a>
+          <a href=""><img class="icons8-customer-support-32-2-EMP" src="./assets/icons8-customer-support-32-2.png"/></a>
+          <div class="hello-rider-MB7">Hello, <%= driver %></div>
+          <a href=""><img class="vector-8jb" src="./assets/vector-fCm.png"/></a>
+        </div>
+        <div class="auto-group-tcxr-rfb">
+        </div>
+      </div>
+    </div>
+    <div class="frame-80-kW5">
+      <p class="available-ride-suggestions-according-to-your-current-location-dZs">Available ride suggestions according to your current location</p>
+      <% if (rides && rides.length > 0) { %>
+      <% for (let i = 0; i < rides.length; i++) { %>
+      <div class="filterBoxes">
+          <div class="filterTexts">Pickup location : <%= rides[i].pickup %></div>
+          <div class="filterTexts">Drop location : <%= rides[i].drop %></div>
+          <div class="filterTexts">Date : <%= rides[i].dateof %></div>
+          <div class="filterTexts">Time : <%= rides[i].timeof %></div>
+          <div class="filterTexts">Vehicle Type : <%= rides[i].type %></div></div>
+          <!-- Display other properties of the ride object as needed -->
+        <% } %>
+      <% } else { %>
+        <p class="filterTexts">No ride suggestions available.</p>
+      <% } %>
+
+    </div>
+
+    <div class="frame-27119-5s7">
+      <p class="filters-for-searching-the-rides-faster-1km">Filters for searching the rides faster</p>
+      <div class="frame-27118-vsj">
+        <div class="auto-group-1oxm-Ggh">
+          <div class="rectangle-53-2fs">
+            <form action="/driver-main-page" method="post">
+            <input id="autocomplete" class="design" name="pickup" type="text" placeholder="Pickup Location">
+          </div>
+          <div class="rectangle-5-gpy">
+            <input class="design" name="drop" type="text" placeholder="Drop Location">
+          </div>
+          <div class="rectangle-5-nd7">
+            <input name="time" class="design" type="time">
+          </div>
+          <div class="rectangle-5-jKP">
+            <input name="date" class="design" type="date">
+          </div>
+        </div>
+        <div class="auto-group-aw2y-FYd">
+          <div class="rectangle-5-nYZ">
+            <select name="type" class="design">
+              <option value="Two-wheeler">Two-wheeler</option>
+              <option value="Four-wheeler-Mini">Four-wheeler-Mini</option>
+              <option value="Four-wheeler-Sedan">Four-wheeler-Sedan</option>
+              <option value="Four-wheeler-XUV">Four-wheeler-XUV</option>
+              <option value="Three-wheeler-Auto">Three-wheeler-Auto</option>
+            </select>
+          </div>
+            <div class="frame-27133-63T"><button class="submit" type="submit">Submit</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

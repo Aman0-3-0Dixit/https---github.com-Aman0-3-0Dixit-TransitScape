@@ -1,0 +1,187 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 120rem;
+}.rider-scheduling-page-Dn9 {
+  width: 100%;
+  height: 160.8rem;
+  position: relative;
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 {
+  box-sizing: border-box;
+  padding: 0.073rem 0rem 0.073rem 0.006rem;
+  width: 120rem;
+  height: 160.8rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #241036 26.87%, #412852 83.65%);
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 .frame-44-fPF {
+  box-sizing: border-box;
+  padding-bottom: 112.4rem;
+  width: 258.6938rem;
+  height: 151.227rem;
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 .frame-44-fPF .menu-closed-nTs {
+  margin-bottom: 1.36rem;
+  box-sizing: border-box;
+  padding: 0.627rem 5.806rem 1.023rem 1.794rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(5rem);
+  background-color: #000000;
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 .frame-44-fPF .menu-closed-nTs .logo-Ubb {
+  margin-right: 4.6rem;
+  width: 11rem;
+  height: 8.617rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 .frame-44-fPF .menu-closed-nTs .group-26918-Qk9 {
+  margin: 1.134rem 9.299rem 0rem 0rem;
+  width: 3.3008rem;
+  height: 1.1508rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 .frame-44-fPF .menu-closed-nTs .vector-XZs {
+  margin: 0.451rem 8.298rem 0rem 0rem;
+  width: 2.0016rem;
+  height: 1.6682rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 .frame-44-fPF .menu-closed-nTs .auto-group-qffp-TiR {
+  margin: 0.923rem 4.598rem 0rem 0rem;
+  width: 5.0023rem;
+  height: 3.3041rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 .frame-44-fPF .menu-closed-nTs .vector-ao3 {
+  margin: 0.684rem 8.398rem 0rem 0rem;
+  width: 1.7016rem;
+  height: 1.5008rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 .frame-44-fPF .menu-closed-nTs .vector-Wgh {
+  margin: 0.799rem 7.598rem 0rem 0rem;
+  width: 1.8016rem;
+  height: 1.6186rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 .frame-44-fPF .menu-closed-nTs .icons8-car-30-2-F8V {
+  margin: 0.984rem 7.1rem 0rem 0rem;
+  width: 2.3rem;
+  height: 2.0014rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 .frame-44-fPF .menu-closed-nTs .icons8-customer-support-32-2-mMj {
+  margin: 0.683rem 12.2rem 0rem 0rem;
+  width: 2.1rem;
+  height: 2.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 .frame-44-fPF .menu-closed-nTs .hello-rider-tBT {
+  margin: 0rem 4.6rem 0.117rem 0rem;
+  display: flex;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #933dc9;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 .frame-44-fPF .menu-closed-nTs .vector-P8D {
+  margin-bottom: 0.117rem;
+  width: 2.9rem;
+  height: 3.1rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .rider-schedule-page-Zb7 .frame-44-fPF .auto-group-vqsj-Vww {
+  margin-left: 5.1938rem;
+  width: 253.5rem;
+  height: 27.2rem;
+}
+.rider-scheduling-page-Dn9 .frame-27115-Q3K {
+  width: 100.7rem;
+  height: 99.2rem;
+  position: absolute;
+  left: 8.9rem;
+  top: 24.6rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.rider-scheduling-page-Dn9 .frame-27115-Q3K .your-scheduled-rides-and-deliveries-vXT {
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .frame-27115-Q3K .auto-group-y5uk-quK {
+  box-sizing: border-box;
+  padding: 8.4rem 7.2rem 0rem 7rem;
+  width: 100%;
+  row-gap: 10.1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .frame-27115-Q3K .auto-group-y5uk-quK .rectangle-54-ZqK {
+  width: 100%;
+  height: 21.1rem;
+  background: linear-gradient(180deg, #a765e4 16.98%, #492d5a 100%);
+  border-radius: 16.9rem;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .frame-27115-Q3K .auto-group-y5uk-quK .rectangle-55-5of {
+  width: 100%;
+  height: 21.7rem;
+  background: linear-gradient(180deg, #9b59d6 -0%, #603780 100%);
+  border-radius: 18.9rem;
+  flex-shrink: 0;
+}
+.rider-scheduling-page-Dn9 .frame-27115-Q3K .auto-group-y5uk-quK .rectangle-56-bn1 {
+  width: 100%;
+  height: 22.1rem;
+  background: linear-gradient(180deg, #9c59d9 -0%, #6e3d95 100%);
+  border-radius: 17.9rem;
+  flex-shrink: 0;
+}

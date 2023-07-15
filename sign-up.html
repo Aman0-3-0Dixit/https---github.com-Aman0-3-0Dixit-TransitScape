@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Sign-up</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans%3A300%2C400%2C500"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C500"/>
+  <link rel="stylesheet" href="./styles/sign-up.css"/>
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" /> -->
+  <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+</head>
+<body>
+<div class=" container-fluid sign-up-E1P">
+  <img class="sign-up-yUm" src="./assets/sign-up.png"/>
+  <div class="container-fluid frame-42-vQ1">
+    <img class="item-3636253-1-Dtu" src="./assets/signupImage.png"/>
+  </div>
+  <div class="container-fluid frame-4-iam">
+    <div class="auto-group-fekz-rBB">
+      <div class=" container-fluid frame-43-mow">
+        <div class="frame-27021-gg1">
+        <div class="frame-27021-gg2">
+          <button class="button1 button1Click" onclick="button1click()"><p class="as-a-rider-p1X"> RIDER</p></button></div>
+        <div class="frame-27021-gg3">
+          <button class="button2 button2Click" onclick="button2click()"><p class="as-a-driver-jPP">DRIVER</p></button>
+          <form id="signupForm" action="/sign-up.html" method="post">
+          <input type="hidden"  name="button1Value" value="a" />
+          <input type="hidden"  name="button2Value" value="b" />
+        </div></div>
+      </div>
+      <p class="create-your-account-riu">Create your Account</p>
+      <div class="frame-5-ZdK">
+        <img class="vector-4KB" src="./assets/vector-dpm.png"/>
+        <input name="name" class="inputName" type="text" placeholder="Username" autocomplete="on" required>
+      </div>
+      <div class="frame-1-gbT">
+        <img class="vector-nuP" src="./assets/vector-VUD.png"/>
+        <input name="email" class="inputEmail" type="email" placeholder="example@gmail.com" autocomplete="on" required>
+      </div>
+      <div class="frame-2-Tu3">
+        <div class="rectangle-3-ABB">
+          <img class="vector-cfT" src="./assets/vector-hCu.png"/>
+        </div>
+        <p class="show-oT7"><input name="password" class="inputPassword" type="password" placeholder="**************" autocomplete="on" required></p>
+      </div>
+      <div class="frame-6-Gk1">
+        <img class="icons8-phone-50-1-1-No3" src="./assets/icons8-phone-50-1-1.png"/>
+        <input name="number" id="phone" class="inputNumber" type="tel" placeholder="xxxxxxxxxx" autocomplete="on" required>
+      </div>
+      <div class="auto-group-4dkf-otM">
+        <div class="checkbox-7e9">
+          <div class="rectangle-e8H">
+            <input type="checkbox" name="checkbox" id="check">
+          </div>
+        </div>
+        <p class="i-agree-to-the-terms-conditions-xuf">
+          <span class="i-agree-to-the-terms-conditions-xuf-sub-0">I agree to the </span>
+          <span class="i-agree-to-the-terms-conditions-xuf-sub-1"> Terms &amp; Conditions</span>
+        </p>
+      </div>
+    </div>
+    <div class="auto-group-rkfb-3pd"><button class="createAccount" type="submit" onclick="submitForm()">Create my Account</button></div>
+  </form>
+  <div class="alert alert-info" style="display: none;"></div>
+    <p class="already-have-an-account-sign-in-iQy">
+      <span class="already-have-an-account-sign-in-iQy-sub-0">Already have an account? </span>
+      <span class="already-have-an-account-sign-in-iQy-sub-1"><a href="/sign-in.html">Sign in</a></span>
+    </p>
+  </div>
+  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+  document.querySelector('.button2').classList.remove('button2Click');
+
+  function button1click(){
+  document.querySelector('.button1').classList.toggle('button1Click');
+  document.querySelector('.button2').classList.remove('button2Click');
+
+  const button1Value = document.querySelector('.button1').classList.contains('button1Click') ? 'true' : 'false';
+  document.getElementsByName('button1Value').value = button1Value;
+}
+
+
+function button2click(){
+  document.querySelector('.button2').classList.toggle('button2Click');
+  document.querySelector('.button1').classList.remove('button1Click');
+
+  const button2Value = document.querySelector('.button2').classList.contains('button2Click') ? 'true' : 'false';
+  document.getElementsByName('button2Value').value = button2Value;
+}
+
+
+function submitForm() {
+    // Prevent default form submission
+    event.preventDefault();
+
+    // Get the selected button value
+    const button1Value = document.querySelector('.button1').classList.contains('button1Click') ? 'true' : 'false';
+    const button2Value = document.querySelector('.button2').classList.contains('button2Click') ? 'true' : 'false';
+
+    // Set the appropriate button value based on selection
+    document.querySelector('input[name="button1Value"]').value = button1Value;
+    document.querySelector('input[name="button2Value"]').value = button2Value;
+
+    // Submit the form
+    document.getElementById('signupForm').submit();
+
+      const form = document.getElementById('signupForm');
+    const formData = new FormData(form);
+
+    fetch('/sign-up.html', {
+      method: 'POST',
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        if (response.success) {
+          window.location.href = response.redirect;
+        } else {
+          alert(response.message);
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
+
+  
+
+  
+
+
+
+/*const phoneInputField = document.querySelector("#phone");
+const phoneInput = window.intlTelInput(phoneInputField, {
+  utilsScript:
+    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+
+const info = document.querySelector(".alert-info");
+
+function process(event) {
+event.preventDefault();
+
+const phoneNumber = phoneInput.getNumber();
+
+info.style.display = "";
+info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+console.log(phoneNumber);
+}*/
+
+</script>
+
+</body>
+</html>
