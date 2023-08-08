@@ -2,35 +2,44 @@ const express = require('express');
 const html = require('html');
 const ejs = require('ejs');
 const path = require('path');
-const session = require('express-session');
 const passport = require('passport');
 const passportLocalMongoose = require('passport-local-mongoose');
 const LocalStrategy = require('passport-local').Strategy;
 const crypto = require('crypto');
-var cookieParser = require('cookie-parser')
-
+var cookieParser = require('cookie-parser');
+const session = require('express-session');
 const mongoose = require('mongoose');
 
 const app = express();
-app.use(cookieParser());
-app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.engine('ejs', require('ejs').renderFile);
 
-
+app.use(cookieParser('keyboard cat'));
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: false }
+  cookie: { secure: false },
 }));
   
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Credentials', true);
+    res.header('Access-Control-Allow-Origin', req.headers.origin);
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
+    if ('OPTIONS' == req.method) {
+      res.send(200);
+    } else {
+        next();
+    }
+  });
 
 const db1URL = 'mongodb://127.0.0.1:27017/riderDB'; 
 const db2URL = 'mongodb://127.0.0.1:27017/driverDB'; 
@@ -113,26 +122,29 @@ passport.deserializeUser(function(id, done) {
 passport.serializeUser(function(user, done) {
     console.log('in serialize');
     const userModel = user.constructor.modelName === 'riderModel' ? riderModel : driverModel;
-    done(null, { id: JSON.stringify(user.id), model: userModel.modelName });
+    done(null, { id: user.id, model: userModel.modelName });
     console.log(user.id);
     console.log(userModel.modelName);
+    console.log(user.name);
   });
   
   passport.deserializeUser(function(data, done) {
-    try {
-        console.log(data.id);
-        const Model = data.model === 'riderModel' ? riderModel : driverModel;
-        //console.log(Model.findOne({ id: data.id }));
-        const user = Model.findOne({ id: data.id,  model: data.modelName });
+    console.log('in deserialize');
+    console.log(data.id);
+    const Model = data.model === 'riderModel' ? riderModel : driverModel;
+    Model.findOne({ _id: data.id })
+      .then((user) => {
         if (user) {
+          console.log(user.name);
           done(null, user);
         } else {
           done(null, false);
         }
-      } catch (err) {
+      })
+      .catch((err) => {
         done(err, false);
-      }
-});
+      });
+  });
   
   
   passport.use('local-rider', new LocalStrategy(riderModel.authenticate()));
@@ -141,6 +153,7 @@ passport.serializeUser(function(user, done) {
 
 
   passport.use(new LocalStrategy(function(username, password, done) {
+    console.log('in local strategy');
     riderModel.findOne({
         username: username
     }, function(err, user) {
@@ -188,14 +201,42 @@ app.get('/sign-in.html',function(req,res){
 });
 
 app.get('/rider-page-default',function(req,res){
+
+    
     
     if(req.isAuthenticated()){
+
+        riderModel.findById(req.user.id)
+      .then((user) => {
+        if (!user) {
+          // User not found with the provided ID
+          console.log('User not found');
+          res.sendStatus(404); // Or send an error page indicating the user was not found
+          return;
+        }
+        // Now you have the user object, and you can access its properties
+        console.log(user.name); // Example: Access the 'name' property
+
+        res.render('rider-page-default', { rider: user.name });
+      })
+      .catch((err) => {
+        // Handle any errors that occurred during the query execution
+        console.error(err);
+        res.sendStatus(500); // Or send an error page
+      });
+  } else {
+    console.log(req.isAuthenticated());
+    res.sendFile(path.join(__dirname, 'sign-in.html'));
+  }
+                
+               /* console.log(req.isAuthenticated());
+                console.log(req.user);
                 res.render('rider-page-default',{rider: req.name});
             } 
         else{
             console.log(req.isAuthenticated());
             res.sendFile(path.join(__dirname, 'sign-in.html'));
-        }
+        }*/
 
 });
 
@@ -220,9 +261,46 @@ app.get('/driver-main-page',function(req,res){
     else{
         var datte = (year + '-' + mon + '-' + dat);
     }
+
+    driverModel.findById(req.user.id)
+    .then((user) => {
+      if (!user) {
+        // User not found with the provided ID
+        console.log('User not found');
+        res.sendStatus(404); // Or send an error page indicating the user was not found
+        return;
+      }
+      // Now you have the user object, and you can access its properties
+      console.log(user.name); // Example: Access the 'name' property
+      rideRequests.find({ dateof: datte }).then((result) => {
+        if (result) {
+          rides = result;
+          res.render('driver-main-page', { rides: rides, driver: user.name });
+        } else {
+          console.log('No ride requests found');
+          res.render('driver-main-page', { rides :[], driver: user.name });
+        }
+      }).catch((err) => {
+        console.log(err);
+        res.render('driver-main-page', { rides: [], driver: "" });
+      });
+      
+    }) /*else{
+        res.sendFile(path.join(__dirname, 'sign-in.html'));
+    }*/
+
+      
+
+      //res.render('rider-page-default', { rider: user.name });
+    //})
+    /*.catch((err) => {
+      // Handle any errors that occurred during the query execution
+      console.error(err);
+      res.sendStatus(500); // Or send an error page
+    });*/
     
 
-    rideRequests.find({ dateof: datte }).then((result) => {
+    /*rideRequests.find({ dateof: datte }).then((result) => {
         if (result) {
           rides = result;
           res.render('driver-main-page', { rides: rides, driver: "" });
@@ -236,8 +314,20 @@ app.get('/driver-main-page',function(req,res){
       });
     } else{
         res.sendFile(path.join(__dirname, 'sign-in.html'));
-    }
-});
+    }*/
+}});
+
+
+app.get("/logout", function (req, res) {
+    req.logout(function (err) {
+      if (err) {
+        console.error("Error logging out:", err);
+        return res.sendStatus(500);
+      }
+      // Redirect to the sign-in page after successful logout
+      res.redirect("/sign-in.html");
+    });
+  });
 
 
 
@@ -439,13 +529,13 @@ app.post("/sign-in.html",function(req,res){
             });
 
             passport.authenticate('local')(req, res, function() {
-                req.login(user, function(err) {
+                req.login(result, function(err) {
                   if (err) {
                     console.log(err);
                   } else {
                     req.session.save(() =>
                             {
-                              return res.redirect('rider-page-default');
+                              res.redirect('rider-page-default');
                             });
                   }
                 });
@@ -492,15 +582,25 @@ app.post("/sign-in.html",function(req,res){
                     });
                     /*driverModel.findOne({password: password}).then((result) => {  
                         if (result) {*/
-                            req.login(user,function(err){
-                                if(err){
-                                    console.log(err);
-                                }else{
-                                    passport.authenticate('local')(req,res,function(){
-                                        res.redirect('driver-main-page');
-                                    });
-                                }
-                        })} /*else{
+                        passport.authenticate('local')(req, res, function() {
+                            req.login(result, function(err) {
+                              if (err) {
+                                console.log(err);
+                              } else {
+                                req.session.save(() =>
+                                        {
+                                          res.redirect('driver-main-page');
+                                        });
+                              }
+                            });
+                          });
+
+
+
+
+
+
+                    } /*else{
                             console.log("Invalid password");
                             res.sendFile(path.join(__dirname, 'sign-in.html'));
                         }}).catch((err2) => {   
@@ -543,20 +643,43 @@ app.post("/rider-page-default",function(req,res){
         freq: Freq
     });
     
-    newRideRequests.save().then(()=>{
-        console.log('Your Ride is successfully scheduled');
-    }).catch((err)=>{
+    newRideRequests
+      .save()
+      .then((ride) => {
+        // Find the current authenticated rider and update their myRides variable
+        riderModel
+          .findByIdAndUpdate(
+            req.user.id,
+            { $push: { myRides: ride } },
+            { new: true }
+          )
+          .then((updatedRider) => {
+            if (!updatedRider) {
+              console.log("Failed to update rider's myRides");
+              res.sendStatus(500);
+            } else {
+              console.log("Ride scheduled and myRides updated successfully");
+              res.redirect("/rider-page-default"); // Redirect to the rider's page with the updated ride
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+            res.sendStatus(500); // Something went wrong
+          });
+      })
+      .catch((err) => {
         console.log(err);
-    });}
-
-    else{
-        res.sendFile(path.join(__dirname, 'sign-in.html'));
-    }
+        res.sendStatus(500); // Something went wrong
+      });
+  } else {
+    res.sendFile(path.join(__dirname, "sign-in.html"));
+  }
 
 });
 
 
 app.post("/driver-main-page",function(req,res){
+    if(req.isAuthenticated()){
     const filters = {
         pickup: req.body.pickup || null,
         drop: req.body.drop || null,
@@ -574,16 +697,19 @@ app.post("/driver-main-page",function(req,res){
       }
     }
 
+    console.log(req.user.name);
+
     rideRequests
     .find(query)
     .then((result) => {
       const rides = result;
-      res.render('driver-main-page', { rides: rides, driver: "" });
+      res.render('driver-main-page', { rides: rides, driver: req.user.name });
     })
     .catch((err) => {
       console.log(err);
       res.render('driver-main-page', { rides :[], driver: "" }); // Redirect in case of an error
     });
+}
 
 
 });
